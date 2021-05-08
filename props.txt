@@ -1,0 +1,25 @@
+create venv: python3 -m venv <name_of_venv>
+activate venv: source venv/bin/activate
+deactivate venv: deactivate
+
+cakechat server: 
+cd cakechat
+source venv/bin/activate
+python bin/cakechat_server.py
+
+flask server
+cd my-app/api
+source venv/bin/activate
+flask run
+
+react app
+cd my-app
+npm start
+
+
+lasfm: 
+apikey 3d828a6efa0582c58a2995165911bb1f
+secret 0c0556b7cdc9ed2828d5f9890d5f6942
+
+
+will context in cakechat server appliable for multiple clients

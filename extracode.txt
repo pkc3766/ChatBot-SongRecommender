@@ -1,0 +1,75 @@
+  useEffect(() => {
+    fetch("/api/songs")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+            setSongs(result)
+            console.log(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      )
+  }, []);
+
+
+// function updateSongs(songs)
+  // {
+  //   console.log(songs);
+  //   // setSongs(songs);
+  // }
+
+  // useEffect(() => {
+  //     // POST request using fetch inside useEffect React hook
+  //     const requestOptions = {
+  //         method: 'POST',
+  //         headers: { 'Content-Type': 'application/json' },
+  //         body: JSON.stringify({ tone:tone })
+  //     };
+  //     fetch('/api/songs', requestOptions)
+  //         .then(response => response.json())
+  //         .then(
+  //           (result) => {
+  //               setSongs(result)
+  //               console.log(result);
+  //           },
+  //           (error) => {
+  //             console.log(error);
+  //           }
+  //         )
+  //     }, []);
+
+
+// let songs={
+  //     "15 Step": "https://www.last.fm/music/Radiohead/_/15+Step",
+  //     "Airbag": "https://www.last.fm/music/Radiohead/_/Airbag",
+  //     "All I Need": "https://www.last.fm/music/Radiohead/_/All+I+Need",
+  //     "Everything in Its Right Place": "https://www.last.fm/music/Radiohead/_/Everything+in+Its+Right+Place",
+  //     "Paranoid Android": "https://www.last.fm/music/Radiohead/_/Paranoid+Android"
+  // }
+
+
+  // let res={};
+          // // console.log(result['tracks'])
+          // for(var track in result['tracks']['track'])
+          // {
+          //     console.log(track);
+          //   res[track['name']]=track['url']
+          // }
+
+
+//setting the initial state of similar songs
+    useEffect(()=>{
+    fetch("/api/songs/similar")
+    .then((res) => res.json())
+    .then(
+      (result) => {
+          console.log('in fetch similar songs')
+          setSimilarSongs(result)
+          console.log(result);
+      },
+      (error) => {
+        console.log(error);
+      }
+    )
+    },[]);
