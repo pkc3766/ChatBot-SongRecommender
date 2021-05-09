@@ -4,16 +4,7 @@
 *.swp
 *.egg-info
 .idea
-cakechat/temp/*
-cakechat/dist/*
-cakechat/build/*
-cakechat/tags
-cakechat/venv
-cakechat/results/
-cakechat/!data/corpora_processed/
-cakechat/!data/quality/
-cakechat/data/
-cakechat/dockerfiles/
+cakechat/
 
 # React app gitignore
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
