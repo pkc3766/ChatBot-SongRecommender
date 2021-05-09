@@ -4,14 +4,14 @@
 *.swp
 *.egg-info
 .idea
-temp/*
-dist/*
-build/*
-tags
-venv
-results
-!data/corpora_processed
-!data/quality
+cakechat/temp/*
+cakechat/dist/*
+cakechat/build/*
+cakechat/tags
+cakechat/venv
+cakechat/results/
+cakechat/!data/corpora_processed/
+cakechat/!data/quality/
 cakechat/data/w2v_models/train_processed_dialogs_window10_voc50000_vec128_sgTrue.bin
 
 # React app gitignore
@@ -42,7 +42,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
 extracode.txt
 props.txt
-*.txt
