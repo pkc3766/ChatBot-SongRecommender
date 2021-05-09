@@ -1,4 +1,6 @@
 from flask import Blueprint,request
+import os
+from dotenv import load_dotenv,find_dotenv
 songs = Blueprint('songs', __name__)
 import requests
 
@@ -13,13 +15,15 @@ toneWithTagMap={
     'Neutral':'experimental'
 }
 
+load_dotenv(find_dotenv())
+
 tone='Neutral'
 
 # returns songs with a particular tag(found using tone)
 @songs.route('/api/songs',methods=['GET','POST'])
 def getSongs():
     # tone=request
-    tone='Joy'
+    tone='Neutral'
     if request.method=='POST':
         data=request.get_json()
         tone=data['tone']
@@ -27,7 +31,7 @@ def getSongs():
     # print('in getSongs ',tone)
     tag=toneWithTagMap[tone]
     params={
-        'api_key':'3d828a6efa0582c58a2995165911bb1f',
+        'api_key':os.environ.get("API_KEY"),
         'limit':5,
         'method':'tag.getTopTracks',
         'tag':tag,
@@ -49,10 +53,8 @@ def getSimilarSongs():
         data=request.get_json()
         track=data['track']
         artist=data['artist']
-    print(track)
-    print(artist)
     params={
-        'api_key':'3d828a6efa0582c58a2995165911bb1f',
+        'api_key':os.environ.get("API_KEY"),
         'limit':5,
         'method':'track.getSimilar',
         'track':track,

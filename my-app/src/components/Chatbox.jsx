@@ -32,10 +32,10 @@ function Chat(){
       })
       .then(function (response) {
         let tone=response['data']['tone'];
-        if(tone!=chatTone)
+        if(tone!==chatTone)
         {
+          console.log('Tone changes from ',chatTone,' to ',tone)
           setChatTone(tone);
-          console.log('Tone analysed',tone)
           // re render Songs component
           getSongs(tone)
         } 
@@ -77,12 +77,12 @@ function Chat(){
 
     let divStyle = {
       padding:"10px",
-      top:'30px',
+      top:'50px',
       textAlign:"center",
       align:"center",
       width:"45%",
       position:'absolute',
-      left:'30%',
+      left:'28%',
       display:'inline-block'
     }
 

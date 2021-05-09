@@ -5,7 +5,7 @@ function SimilarSongs(props)
 {
     const [songs,setSimilarSongs] = useState({});
     
-    //triggered whenever props['songs'] changes
+    //triggered whenever props changes
     useEffect(() => {
         console.log('in useEffect similarSongs')
         // console.log(props['songs'])
@@ -18,7 +18,7 @@ function SimilarSongs(props)
         textAlign:'center',
         width:"fit-content",
         position:'absolute',
-        right:'200px',
+        right:'150px',
         top:'50px',
         display:'inline-block'
     }

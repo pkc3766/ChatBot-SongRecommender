@@ -9,7 +9,8 @@ function Songs(props) {
   const [songs, setSongs] = useState({});
   // state for similar songs
   const [similarSongs,setSimilarSongs]=useState({});
-
+  const [lastHeardSong,setLastHeardSong]=useState("");
+  
   //setting initial state
   useEffect(()=>{
     fetch("/api/songs")
@@ -30,6 +31,12 @@ function Songs(props) {
   //sets the similarSongs state to retrieved songs
   function similarSongsHandler(track,artist)
   {
+    let currentSong=track+" "+artist;
+    if(lastHeardSong===currentSong)
+    {
+      return;
+    }
+    setLastHeardSong(currentSong);
     axios.post('/api/songs/similar', {
       track:track,
       artist:artist
@@ -42,7 +49,7 @@ function Songs(props) {
     });
   }
   
-  //whenever props[songs] changes this side effect is triggered
+  //whenever props changes this side effect is triggered
   useEffect(() => {
     console.log('in useEffect recommended songs')
     // console.log(props['songs'])
@@ -57,7 +64,7 @@ function Songs(props) {
   textAlign:'center',
   width:"fit-content",
   position:'absolute',
-  left:'200px',
+  left:'150px',
   top:'50px',
   display:'inline-block'
 }

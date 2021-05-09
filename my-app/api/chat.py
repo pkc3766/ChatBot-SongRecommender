@@ -24,9 +24,8 @@ def getChatResponse():
     data=request.get_json()
     msg=data['chat']
     tone=data['tone']
-    print('Inside cakechat response message is ')
-    print(msg)
-    print(tone)
+    print('Inside cakechat message is ',msg)
+    print('Inside cakechat tone is ',tone)
     if len(msg)>0:
         context.append(msg)
     if len(context)>3:

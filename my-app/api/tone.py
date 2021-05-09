@@ -7,11 +7,9 @@ from utility_functions.utils import analyseTone
 def getTone():
     msg=request.get_json()
     msg=msg['chat']
-    print('In tone analyser message is ')
-    print(msg)
+    print('In tone analyser message is ',msg)
     tone=analyseTone(msg)
-    print('tone analysed is')
-    print(tone)
+    print('In tone analyser tone analysed is ',tone)
     return {
         'tone':tone
     }

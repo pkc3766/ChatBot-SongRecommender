@@ -17,15 +17,17 @@ results
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-my-app/node_modules
-mp-app/.pnp
+my-app/node_modules/
+my-app/api/venv/
+venv/
+/.pnp
 .pnp.js
 
 # testing
-my-app/coverage
+my-app/coverage/
 
 # production
-my-app/build
+my-app/build/
 
 # misc
 .DS_Store
@@ -33,7 +35,13 @@ my-app/build
 .env.development.local
 .env.test.local
 .env.production.local
+.env
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+extracode.txt
+props.txt
+*.txt
