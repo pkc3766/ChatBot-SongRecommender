@@ -12,6 +12,7 @@ venv
 results
 !data/corpora_processed
 !data/quality
+cakechat/data/w2v_models/train_processed_dialogs_window10_voc50000_vec128_sgTrue.bin
 
 # React app gitignore
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
