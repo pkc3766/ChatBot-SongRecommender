@@ -26,10 +26,11 @@ def getChatResponse():
     tone=data['tone']
     print('Inside cakechat message is ',msg)
     print('Inside cakechat tone is ',tone)
-    if len(msg)>0:
-        context.append(msg)
-    if len(context)>3:
-        context.pop(0)
+    # if len(msg)>0:
+    #     context.append(msg)
+    # if len(context)>3:
+    #     context.pop(0)
+    context=[msg]
     print(context)
     data={
         'context':context,

@@ -23,6 +23,7 @@ function Chat(){
       textAreaRef.current.value="";
       getTone(chat);
       getResponse(chat,chatTone);
+      setChatResponse("");
     }
 
     function getTone(chat)
