@@ -1,11 +1,11 @@
 # ChatBot-SongRecommender
 
 ### Tech stack
-Backend: Flask, cakechat(backend server for chatbot)
-Frontend: React.js
+- Backend: Flask, cakechat(backend server for chatbot)
+- Frontend: React.js
 
 # Demo Video 
-@ https://youtu.be/Oo1N9rIRP0g
+https://youtu.be/Oo1N9rIRP0g
 
 ### Features
 
