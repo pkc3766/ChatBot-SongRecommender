@@ -20,5 +20,8 @@ https://youtu.be/Oo1N9rIRP0g
 - Song Recommendation is done with help of 'last.fm' API
 - User writes a message. Based on the user's message, IBM tone analyser analyses the mood of the user. This mood along with message is used for cakechat server to get chat response. Mood is also used to get songs recommendation from last.fm API.
 
+## References
+https://www.crio.do/projects/python-chatbot-api/?utm_source=email&utm_medium=newsletter
+
 
 
