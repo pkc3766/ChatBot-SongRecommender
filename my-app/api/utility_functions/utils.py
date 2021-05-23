@@ -1,9 +1,12 @@
 from ibm_watson import ToneAnalyzerV3
+import os
+from dotenv import load_dotenv,find_dotenv
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 
 def analyseTone(context):
-    authenticator = IAMAuthenticator('1HTFBWv249zN_OBxAcoGzOS88rZVNrBaCeBxDGYXnrNP')
+    # 
+    authenticator = IAMAuthenticator(os.environ.get("TONE_ANAYLSER_AUTHENTICATOR_KEY"))
     tone_analyzer = ToneAnalyzerV3(
         version='2017-09-21',
         authenticator=authenticator
