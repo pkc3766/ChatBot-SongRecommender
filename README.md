@@ -5,7 +5,8 @@
 - Frontend: React.js
 
 # Demo Video 
-https://youtu.be/Oo1N9rIRP0g
+[![ChatBot-SongRecommender](http://img.youtube.com/vi/Oo1N9rIRP0g)](http://www.youtube.com/watch?v=Oo1N9rIRP0g)
+
 
 ### Features
 
